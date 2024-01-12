@@ -1,0 +1,85 @@
+// USER VARIABLES SECTION
+
+$accent: #A62318
+$success: #0ab14a
+$secondary: #4772A7
+$secondaryDark: #002F55
+$secondaryLight: #BDD0E8
+$alpha: #aba385
+$bravo: #606060
+$fontsize: 16px // Body Font Size
+$textcolor: #333 // Text Color
+$lineheight: 1.65 // Document Line Height
+$userfont: intro-geo, sans-serif // User Font Family
+$systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif // System Font Family
+
+// Bootstrap compatible gutter variable => $gutter
+$grid-gutter-width: 30px
+$gutter: $grid-gutter-width
+
+$container-max-widths: (sm: 100%, md: 760px, lg: 970px, xl: 1150px)
+
+// IMPORT SECTION
+
+@import 'node_modules/bootstrap/scss/bootstrap-reboot.scss' // Bootstrap Reboot collection
+@import 'node_modules/bootstrap/scss/mixins/_breakpoints.scss' // Bootstrap Breakpoints mixin
+@import 'node_modules/bootstrap/scss/bootstrap-grid.scss' // Optional Bootstrap Grid
+// @import 'node_modules/bootstrap/scss/utilities/_sizing.scss' // Optional Bootstrap Utilites
+
+@import "app/libs/slick/slick"
+@import "app/libs/fancybox/jquery.fancybox.min"
+@import "app/libs/hamburger/hamburger"
+@import "app/libs/picker/classic"
+@import "app/libs/picker/classic.date"
+
+// FONTS LOAD SECTION
+
+@mixin font-face($font-family, $file-path, $weight: normal, $style: normal, $asset-pipeline: false )
+	@font-face
+		font-family: $font-family
+		font-weight: $weight
+		font-style: $style
+
+		@if $asset-pipeline == true 
+			src: font-url('#{$file-path}.eot')
+			src: font-url('#{$file-path}.eot?#iefix') format('embedded-opentype'), font-url('#{$file-path}.woff') format('woff'), font-url('#{$file-path}.ttf') format('truetype')
+		@else
+			src: url('#{$file-path}.eot')
+			src: url('#{$file-path}.eot?#iefix') format('embedded-opentype'), url('#{$file-path}.woff') format('woff'), url('#{$file-path}.ttf') format('truetype')
+
++font-face("raleway-geo", "../fonts/Raleway-Medium/Raleway-Medium", 500)
++font-face("raleway-geo", "../fonts/Raleway-SemiBold/Raleway-SemiBold", 600)
++font-face("raleway-geo", "../fonts/Raleway-ExtraBold/Raleway-ExtraBold", 800)
++font-face("raleway-geo", "../fonts/Raleway-Black/Raleway-Black", 900)
++font-face("intro-geo", "../fonts/Intro-Book/Intro-Book")
++font-face("intro-geo", "../fonts/Intro-Regular/Intro-Regular", 500)
++font-face("ibm-geo", "../fonts/IBMPlexSerif-Regular/IBMPlexSerif-Regular")
++font-face("ibm-geo", "../fonts/IBMPlexSerif-Medium/IBMPlexSerif-Medium", 500)
+
+// GENERAL DOCUMENT STYLES
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+input, textarea
+	outline: none
+	&:focus:required:invalid
+		border-color: red
+	&:required:valid
+		border-color: green
+
+html
+	overflow-x: hidden
+
+body
+	font-family: $userfont
+	font-size: $fontsize
+	line-height: $lineheight
+	color: $textcolor
+	min-width: 320px
+	position: relative
+	overflow-x: hidden

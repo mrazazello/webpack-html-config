@@ -1,0 +1,568 @@
+/*==========  Desktop First  ==========*/
+
+// ≥1400px
++media-breakpoint-down(xxl)
+	.slider
+		&__nav
+			&_prev
+				left: 0
+			&_next
+				right: 0
+
+	.item-showcase
+		&__container
+			padding: 0 40px
+
+	.divider
+		&__line
+			width: 1320px
+
+// ≥1200px
++media-breakpoint-down(xl)
+	.container-xxl
+		max-width: 970px
+
+	.header
+		&__navbar
+			max-width: 507px
+
+	.navbar
+		align-items: flex-start
+		padding: 8px 25px 8px 14px
+		&__socials
+			margin-right: 19px
+		&__menu
+			li
+				margin: 5px
+
+	.section-benefits
+		padding: 70px 0 125px
+
+	.benefits
+		&__item
+			flex: 0 0 50%
+			max-width: 50%
+			&.item-benefit_lg
+				flex: 0 0 50%
+				max-width: 50%
+			&:last-child
+				flex: 0 0 100%
+				max-width: 100%
+
+	.item-showcase
+		height: 696px
+
+	.page
+		&__row
+			margin-left: -10px
+			margin-right: -10px
+		&__col
+			padding: 0 10px
+
+	.item-images
+		&__img
+			height: 679px
+
+	.card-cat
+		&__img
+			height: 144px
+
+	.section-map
+		&__text-wrap
+			margin-bottom: 20px
+
+// ≥992px
++media-breakpoint-down(lg)
+	.container-xxl
+		max-width: 760px
+
+	.header
+		&__logo
+			img
+				max-width: 200px
+
+	.item-images
+		&__img
+			height: 550px
+
+	.tour-cards
+		&_placing
+			.card__img
+				height: 128px
+
+	.card-cat
+		&__img
+			height: 150px
+
+	.item-tour
+		&__text
+			-webkit-line-clamp: 5
+		&_stock
+			.item-tour__content
+				width: 350px
+
+// ≥768px
++media-breakpoint-down(md)
+	.container-xxl
+		max-width: 760px
+
+	.animated
+		transition: transform .7s ease
+
+	.header
+		&__container
+			align-items: center
+		&__content
+			display: flex
+			flex-wrap: wrap
+			background-color: #bdd0e8
+			position: fixed
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+			overflow-y: auto
+			padding: 70px 20px 20px
+			align-content: flex-start
+			transform: translate3d(0, -100%, 0)
+			z-index: 10
+			&.active
+				transform: translate3d(0, 0, 0)
+		&__hamburger
+			display: block
+		&__logo
+			&_mobile
+				display: block
+				flex: 0 0 50%
+				max-width: 50%
+				margin-bottom: 30px
+		&__contacts
+			flex: 0 0 50%
+			max-width: 50%
+			transform: translateX(20px)
+			margin-bottom: 30px
+		&__navbar
+			flex: 0 0 100%
+			max-width: 100%
+			margin-bottom: 30px
+			padding: 7px 20px 7px 0
+
+	.navbar
+		&__socials
+			margin-right: 10px
+
+	.socials
+		&__item
+			padding: 5px 10px
+
+	.section-title
+		font-size: 40px
+
+	.section-description
+		font-size: 18px
+
+	.title
+		font-size: 18px
+
+	.main-title
+		font-size: 50px
+
+	.item-benefit
+		&__title
+			font-size: 18px
+
+	.item-place
+		padding: 100px 0 70px
+		&__header
+			margin-bottom: 130px
+		&__text
+			font-size: 18px
+		&__subtitle
+			font-size: 18px
+			margin-bottom: 10px
+
+	.card-blog
+		&__content
+			padding: 10px 20px 20px
+		&__title
+			bottom: 12px
+			left: 20px
+			right: 20px
+
+	.follow-us
+		&__text
+			font-size: 18px
+
+	.slider-showcase
+		&__spiral
+			width: 90px
+			height: 78px
+		&__nav
+			bottom: 118px
+
+	.item-showcase
+		height: 550px
+		padding-bottom: 108px
+
+	.item-images
+		&__img
+			height: 525px
+
+	.tour-cards
+		&_placing
+			.card__img
+				height: 200px
+
+	.page
+		&__title
+			font-size: 28px
+
+	.content
+		h1
+			font-size: 32px
+		h2
+			font-size: 28px
+		h3
+			font-size: 24px
+		h4
+			font-size: 22px
+		h5
+			font-size: 20px
+		h6
+			font-size: 18px
+
+	.card-cat
+		&__img
+			height: 184px
+
+	.booking
+		.g-recaptcha
+			transform: scale(.75)
+
+	.gallery
+		&__row
+			margin-left: -5px
+			margin-right: -5px
+		&__col
+			padding: 0 5px
+		&__item
+			margin-bottom: 10px
+
+	.parameters-booking
+		&__item
+			margin-bottom: 20px
+
+// ≥576px
++media-breakpoint-down(sm)
+	.container-xxl
+		max-width: none
+
+	.section-title
+		font-size: 30px
+
+	.main-title
+		font-size: 40px
+
+	.header
+		&__content
+			padding: 60px 20px 20px
+		&__logo
+			&_mobile
+				flex: 0 0 100%
+				max-width: 100%
+				margin-bottom: 20px
+		&__contacts
+			flex: 0 0 100%
+			max-width: 100%
+			justify-content: flex-start
+			transform: none
+		&__navbar
+			flex: 0 0 100%
+			max-width: 100%
+
+	.slider-showcase
+		&__spiral
+			width: 60px
+			height: 52px
+		&__nav
+			bottom: 90px
+
+	.item-showcase
+		padding-bottom: 82px
+
+	.benefits
+		&__item
+			flex: 0 0 100%
+			max-width: 100%
+			margin-bottom: 10px
+			&.item-benefit_lg
+				flex: 0 0 100%
+				max-width: 100%
+
+	.item-benefit
+		&__text
+			font-size: 16px
+
+	.item-tour
+		&__inner
+			display: flex
+			flex-direction: column
+			justify-content: flex-end
+		&__title
+			font-size: 18px
+		&__content
+			padding: 10px
+			width: 100%
+			min-height: auto
+			margin-left: 0
+		&_stock
+			.item-tour__inner
+				min-height: 380px
+			.item-tour__content
+				width: 100%
+
+	.blog
+		&__card
+			margin-bottom: 10px
+		&__link-wrap
+			margin-top: 20px
+
+	.card-blog
+		&__content
+			padding: 10px
+		&__title
+			bottom: 10px
+			left: 10px
+			right: 10px
+
+	.section-mailing
+		.section__headline
+			margin-bottom: 40px
+
+	.form-mailing
+		&__row
+			flex-direction: column
+			align-items: center
+		&__control
+			font-size: 18px
+			margin: 0 0 10px
+
+	.footer
+		&__col
+			&_menu
+				order: 1
+			&_info
+				order: 2
+		&__menu
+			margin-bottom: 25px
+		&__top
+			margin-bottom: 28px
+		&__links
+			margin-bottom: 70px
+
+	.filter
+		text-align: center
+		&__list
+			text-align: left
+			display: inline-flex
+			flex-direction: column
+
+	.page
+		&__aside
+			margin-top: 70px
+		&__filter
+			margin-bottom: 20px
+		&__title
+			font-size: 26px
+
+	.aside
+		&__block
+			&.links-page_filter
+				margin-bottom: 10px
+			&:last-child.booking
+				margin-bottom: -70px
+
+	.booking
+		margin: 0 -15px
+		.g-recaptcha
+			transform: scale(.9)
+
+	.links-page
+		&__item
+			margin-bottom: 0
+			padding-bottom: 10px
+		&__list
+			display: flex
+			flex-wrap: wrap
+			margin: 0 -5px
+		li
+			margin: 0 5px 10px
+		&_filter
+			overflow: hidden
+			.links-page__title
+				font-family: raleway-geo, sans-serif
+				background-color: #fff
+				padding: 8px 30px 8px 11px
+				border: 1px solid #bdbdbd
+				border-radius: 4px
+				font-size: 17px
+				font-weight: 600
+				line-height: 1.24
+				text-transform: none
+				position: relative
+				margin-bottom: 10px
+				&::before
+					content: ''
+					display: block
+					position: absolute
+					width: 9px
+					height: 9px
+					background: url(../images/dist/icons/arrow_down.svg) left / contain no-repeat
+					top: 50%
+					transform: translateY(-50%)
+					right: 12px
+					transition: transform .25s ease
+			.links-page__form
+				margin-bottom: 10px
+			.links-page__list
+				display: block
+				margin: 0
+			li
+				margin: 0
+				&:not(:last-child)
+					margin-bottom: 13px
+			.links-page__item.active
+				.links-page__form
+					display: block
+				.links-page__title::before
+					transform: translateY(-50%) rotate(-180deg)
+
+	.item-place
+		&_default
+			min-height: 231px
+			padding: 38px 10px
+			.item-place__subtitle
+				margin-bottom: 20px
+	
+	.item-images
+		&__img
+			height: 350px
+		&__title
+			left: 10px
+			right: 10px
+			bottom: 10px
+
+	.content
+		font-size: 16px
+		h1
+			font-size: 30px
+		h2
+			font-size: 26px
+		h3
+			font-size: 22px
+		h4
+			font-size: 20px
+		h5
+			font-size: 18px
+		h6
+			font-size: 16px
+
+	.team
+		&__title
+			margin-bottom: 10px
+
+	.item-team
+		&__inner
+			flex-direction: column
+		&__img-wrap
+			margin: 0 0 20px
+		&__contacts
+			margin-top: 14px
+
+	.item-review
+		&__inner
+			flex-direction: column
+		&__img-wrap
+			margin: 0 0 10px
+
+	.feedback
+		&__col
+			&_name, &_program, &_phone, &_email
+				flex: 0 0 100%
+				max-width: 100%
+		&__btn
+			width: 100%
+
+	.message
+		&__inner
+			padding: 30px
+
+	.section-map
+		height: 628px
+		&__text
+			font-size: 16px
+		&__inner
+			max-width: none
+			padding: 70px 0
+			text-align: center
+			&::before
+				right: -15px
+
+	.parameters-booking
+		&__item
+			&:last-child
+				margin-bottom: 0
+
+	.item-parameters-booking
+		&__title
+			font-size: 16px
+		&__text-wrap
+			font-size: 16px
+
+	.stock
+		&__item
+			margin-bottom: 20px
+
+	.super-map
+		margin-left: -15px
+		margin-right: -15px
+		&__text
+			padding: 0 15px
+
+	.element-super-map
+		&__balloon
+			transform: translateX(-50%)
+
+// ≥320px
+@media (max-width: 320px)
+	.main-title
+		font-size: 30px
+
+	.item-images
+		&__img
+			height: 203px
+
+	.tour-cards
+		&_placing
+			.card__img
+				height: 188px
+
+/*==========  Mobile First  ==========*/
+
+// ≤576px
++media-breakpoint-up(sm)
+	.d-sm-none
+		display: none!important
+	.d-sm-block
+		display: block!important
+
+// ≤768px
++media-breakpoint-up(md)
+	.d-md-none
+		display: none!important
+
+// ≤992px
++media-breakpoint-up(lg)
+
+// ≤1200px
++media-breakpoint-up(xl)
