@@ -17,16 +17,16 @@ const config: Configuration = {
 	},
 	output: {
 		filename: '[name].bundle.js',
-		path: path.resolve(__dirname, 'dist/build'),
-		assetModuleFilename: '[name].[hash].[ext]',
+		path: path.resolve(__dirname, 'dist'),
+		// assetModuleFilename: '[name].[hash].[ext]',
 	},
 	resolve: {
 		extensions: ['*', '.js', '.jsx', '.ts', '.tsx'],
 		alias: {
-			'@helpers': path.resolve(__dirname, 'src/assets/scripts/helpers/'),
-			'@modules': path.resolve(__dirname, 'src/assets/scripts/modules/'),
+			'@helpers': path.resolve(__dirname, 'src', 'assets', 'scripts', 'helpers'),
+			'@modules': path.resolve(__dirname, 'src', 'assets', 'scripts', 'modules'),
 		},
-		// modules: ['node_modules', './src/assets', './src/assets/scripts']
+		modules: ['node_modules', './src/assets', './src/assets/scripts']
 	},
 	watchOptions: {
 		aggregateTimeout: 100,
@@ -111,21 +111,7 @@ const config: Configuration = {
 	plugins: [
 		new webpack.HotModuleReplacementPlugin(),
 		...generateHtmlPlugins({
-			templates: path.resolve(__dirname, 'src/templates'),
-		}),
-		...generateHtmlPlugins({
-			templates: path.resolve(__dirname, 'src/popups'),
-			dist: './popups/',
-			options: {
-				inject: false,
-			},
-		}),
-		...generateHtmlPlugins({
-			templates: path.resolve(__dirname, 'src/chunks'),
-			dist: './chunks/',
-			options: {
-				inject: false,
-			},
+			templates: path.resolve(__dirname, 'src', 'templates'),
 		}),
 		new AbsolutePathPlugin({
 			dirname: __dirname,
