@@ -18,7 +18,7 @@ const config: Configuration = {
 	output: {
 		filename: '[name].bundle.js',
 		path: path.resolve(__dirname, 'dist'),
-		// assetModuleFilename: '[name].[hash].[ext]',
+		assetModuleFilename: '[name].[hash].[ext]',
 	},
 	resolve: {
 		extensions: ['*', '.js', '.jsx', '.ts', '.tsx'],
