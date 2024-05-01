@@ -17,6 +17,7 @@ const getFiles = (path, files = []) => {
           files.push(path + '/' + file);
         }
       });
+    return files;
 };
 
 module.exports = getFiles;

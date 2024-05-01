@@ -14,6 +14,7 @@ const config: Configuration = {
 	mode: 'development',
 	entry: {
 		index: __dirname + '/src/assets/entry.ts',
+		styles: __dirname + '/src/styles/main.sass'
 	},
 	output: {
 		filename: '[name].bundle.js',
@@ -85,13 +86,9 @@ const config: Configuration = {
 			{
 				test: /\.(sa|sc|c)ss$/,
 				use: [
-					'style-loader',
 					{
-						loader: 'css-loader',
-						options: {
-							sourceMap: true,
-							importLoaders: 1,
-						},
+						loader: 'file-loader',
+						options: { outputPath: 'css/', name: '[name].min.css'}
 					},
 					{
 						loader: 'sass-loader',

@@ -7,9 +7,8 @@ interface IProps {
 
 const generateHtmlCriticalPlugins = ({ base }: IProps) => {
 	let files: string[] = [];
-	let paths: string[] = [];
 
-	getFiles(base, paths);
+	const paths: string[] = getFiles(base, []);
 
 	files = paths
 		.filter((item) => !!item.split('.')[1])

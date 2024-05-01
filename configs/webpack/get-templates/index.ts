@@ -25,8 +25,8 @@ interface IGenerateHtmlPluginsProps {
 export const generateHtmlPlugins = ({ templates, dist = '', options = {} }: IGenerateHtmlPluginsProps) => {
     options = Object.assign(defaultOptions, options);
 
-    let paths: string[] = [];
-    getFiles(templates, paths);
+    // let paths: string[] = [];
+    const paths: string[] = getFiles(templates, []);
 
     return getTemplates(
         paths

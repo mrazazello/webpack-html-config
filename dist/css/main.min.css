@@ -1,0 +1,25 @@
+html {
+  overflow-x: hidden;
+}
+
+body {
+  font-family: intro-geo, sans-serif;
+  font-size: 16px;
+  line-height: 1.65;
+  color: #333;
+  min-width: 320px;
+  position: relative;
+  overflow-x: hidden;
+}
+
+header {
+  padding: 20px;
+  background-color: green;
+  color: white;
+}
+
+footer {
+  padding: 20px;
+  background-color: blue;
+  color: white;
+}
