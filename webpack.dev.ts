@@ -2,6 +2,7 @@ import path from 'path';
 import webpack from 'webpack';
 import { Configuration as WebpackConfiguration } from 'webpack';
 import { Configuration as WebpackDevServerConfiguration } from 'webpack-dev-server';
+import CopyPlugin  from "copy-webpack-plugin";
 
 import { AbsolutePathPlugin } from './configs/webpack/absolute-path';
 import { generateHtmlPlugins } from './configs/webpack/get-templates';
@@ -13,7 +14,7 @@ interface Configuration extends WebpackConfiguration {
 const config: Configuration = {
 	mode: 'development',
 	entry: {
-		index: __dirname + '/src/assets/entry.ts',
+		index: __dirname + '/src/scripts/index.ts',
 		styles: __dirname + '/src/styles/main.sass'
 	},
 	output: {
@@ -88,7 +89,7 @@ const config: Configuration = {
 				use: [
 					{
 						loader: 'file-loader',
-						options: { outputPath: 'css/', name: '[name].min.css'}
+						options: { outputPath: 'css/', name: '[name].min.css' }
 					},
 					{
 						loader: 'sass-loader',
@@ -100,12 +101,24 @@ const config: Configuration = {
 			},
 			{
 				test: /\.woff(2)?$|\.ttf$|\.eot$|\.svg$|\.png|\.webp|\.jp(e)?g|\.gif$|\.mp4$|\.mp3$|\.webm$/,
-				type: 'asset/resource',
+				use: [
+					{
+						loader: "file-loader",
+						options: { outputPath: 'assets/', name: '[name].[ext]' } 
+					}
+				],
+				// type: 'asset/resource',
 			},
 		],
 	},
 
 	plugins: [
+		new CopyPlugin({
+			patterns: [
+			  { from: "src/assets", to: "assets" },
+			],
+		  }),
+
 		new webpack.HotModuleReplacementPlugin(),
 		...generateHtmlPlugins({
 			templates: path.resolve(__dirname, 'src', 'templates'),
